@@ -172,3 +172,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+/botnet/botnet_log.txt
+/botnet/commands.bat
