@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 /botnet/botnet_log.txt
 /botnet/commands.bat
+/botnet/commands_to_run.bat

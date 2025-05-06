@@ -14,7 +14,7 @@ then it will do it!  Be CAREFUL!
 
 # URL of the .bat file on your local or remote server - use a host name or IP address of the server if not running on the same machine
 url = "http://localhost:8000/commands.bat"
-local_filename = "commands.bat"
+local_filename = "commands_to_run.bat"
 
 # Download the .bat file from the command server
 response = requests.get(url)
