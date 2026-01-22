@@ -176,3 +176,4 @@ cython_debug/
 /botnet/commands.bat
 /botnet/commands_to_run.bat
 /async_encryption/*.pem
+/iot_watch/steps.db
