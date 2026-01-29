@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.font as tkfont
 from tkinter import ttk
 import base64
 
@@ -6,7 +7,7 @@ class Base64ConverterApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Base64 Converter")
-        self.font_size = 12
+        self.font_size = 22
 
         # Widgets
         self.input_label = ttk.Label(root, text="Input:")
@@ -72,5 +73,9 @@ class Base64ConverterApp:
 # Run the app
 if __name__ == "__main__":
     root = tk.Tk()
+    # Set default font for all widgets
+    default_font = tkfont.nametofont("TkDefaultFont")
+    default_font.configure(size=22)
+    root.option_add("*Font", default_font)
     app = Base64ConverterApp(root)
     root.mainloop()

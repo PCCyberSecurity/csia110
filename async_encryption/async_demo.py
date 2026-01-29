@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.font as tkfont
 from tkinter import filedialog, messagebox, ttk
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
@@ -8,7 +9,7 @@ class RSAEncryptApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Asymmetric RSA Encryption Tool")
-        self.font_size = 12
+        self.font_size = 22
 
         self.private_key = None
         self.public_key = None
@@ -189,5 +190,9 @@ class RSAEncryptApp:
 # Run app
 if __name__ == "__main__":
     root = tk.Tk()
+    # Set default font for all widgets
+    default_font = tkfont.nametofont("TkDefaultFont")
+    default_font.configure(size=22)
+    root.option_add("*Font", default_font)
     app = RSAEncryptApp(root)
     root.mainloop()

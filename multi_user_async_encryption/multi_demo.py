@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.font as tkfont
 from tkinter import filedialog, messagebox, ttk
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
@@ -8,7 +9,7 @@ class SecureMessengerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Secure Messaging Between Two Users (RSA)")
-        self.font_size = 11
+        self.font_size = 22
 
         # Keys
         self.user1_private = None
@@ -223,5 +224,9 @@ class SecureMessengerApp:
 # Run app
 if __name__ == "__main__":
     root = tk.Tk()
+    # Set default font for all widgets
+    default_font = tkfont.nametofont("TkDefaultFont")
+    default_font.configure(size=22)
+    root.option_add("*Font", default_font)
     app = SecureMessengerApp(root)
     root.mainloop()

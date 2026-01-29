@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.font as tkfont
 from tkinter import ttk
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
@@ -32,7 +33,7 @@ class EncryptApp:
     def __init__(self, root):
         self.root = root
         self.root.title("AES Encryption/Decryption")
-        self.font_size = 12
+        self.font_size = 22
 
         # Text Boxes and Labels
         self.message_label = ttk.Label(root, text="Message:")
@@ -106,5 +107,9 @@ class EncryptApp:
 # Run App
 if __name__ == "__main__":
     root = tk.Tk()
+    # Set default font for all widgets
+    default_font = tkfont.nametofont("TkDefaultFont")
+    default_font.configure(size=22)
+    root.option_add("*Font", default_font)
     app = EncryptApp(root)
     root.mainloop()
